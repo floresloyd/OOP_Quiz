@@ -11,11 +11,11 @@ class QuizBrain:
         return len(self.question_list) > self.question_number       # RETURNS T OR F
 
     def next_question(self):
-        current_question = self.question_list[self.question_number]
+        current_question = self.question_list[self.question_number] # access each question
         self.question_number += 1
         print()
         answer = input(f"Q.{self.question_number} {current_question.text} (True/False): ")
-        self.check_answer(answer, current_question.answer)
+        self.check_answer(answer, current_question.answer) 
 
     def check_answer(self, user_answer, correct_answer):
         if user_answer.lower() == correct_answer.lower():
